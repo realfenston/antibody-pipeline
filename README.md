@@ -26,7 +26,7 @@ python scripts/mmcif2pdb.py --mmcif $in_mmcif --pdb $out_pdb
 **4. complex binding energy**   
 cbe = [complex energy - (antigen energy + antibody energy)], we run openmm to get approximation.
 ```
-python scripts/openmm.py --complex $in_complex --antigen $in_antigen --antibody $in_antibody.py
+python scripts/openmm.py --complex $in_complex --antigen $in_antigen --antibody $in_antibody
 ```
 the console will print out the corresponding binding energy.
 
