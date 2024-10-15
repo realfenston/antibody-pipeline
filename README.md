@@ -34,7 +34,7 @@ the console will print out the corresponding binding energy.
 please check Appendix.3 once the code repo is published released, this should come in the near future.
 
 **6. log likelihoods**
-this estimate the possibility of the sequence giving the current pdb structure, which can be estimated using the scripts under ./structural-evolution dir.
+this estimates the possibility of the sequence giving the current .pdb structure, which can be estimated using the script file under ./structural-evolution dir.
 ```
 cd ./structural-evolution
 python bin/score_log_likelihoods.py pdbfile $in_pdb
@@ -42,17 +42,17 @@ python bin/score_log_likelihoods.py pdbfile $in_pdb
 this script is kindly based on esm-if repo, you may find it online for further reference.
 
 **7. af3 metrics**   
-the following metrics, including plddt, pae, interface pae, are based on AlphaFold3 and not yet verified on af2-multimer, but it is totally open to you for further verification. the overall process should be more or less similar.
+the following metrics, including plddt, pae, interface pae, are based on af3 and not yet verified on af2-multimer, but it is totally open to you for further evaluation, where the overall process could be similar.
 ```
 python scripts/plddt_pae.py
 ```
-the console will then print all the plddt and pae related metrics. ptm is another important structural metric, it is used to understand to which extent the prediction result is analogous to the ground truth folding result.
+the console will then print all the plddt and pae metrics. ptm is another important structural metric, it is used to understand to which extent the prediction result is analogous to the ground truth folding expectation.
 
 **8. binding specificity**   
 currently there is no known model for understanding this antibody-antigen characteristic. leave it for further investigation.
 
 **9. pipeline building**   
-pending work, integrate all the metrics into one pipeline. this might not seem to be necessary now, but will be required for extended metrics and difficulties for analysis.
+pending work, integrate all the metrics into one pipeline. this might not seem to be a necessity now, but will be required for extended difficulties for analysis.
 
 ## Appendix
 1. see ./structural-evolution dir for guidance on antibody mutation and likelihood estimation.
